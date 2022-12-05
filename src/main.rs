@@ -116,6 +116,7 @@ fn get_day(day: &u32) -> fn() -> (Solution, Solution) {
         2 => days::day02::run,
         3 => days::day03::run,
         4 => days::day04::run,
+        5 => days::day05::run,
         _ => panic!("Unimplemented day")
     }
 }
