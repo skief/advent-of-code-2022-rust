@@ -42,8 +42,8 @@ fn run_day(day: &u32) -> ((Solution, Solution), u128){
 }
 
 fn benchmark_day(day: &u32, num_runs: &usize) -> Benchmark {
-    let result = run_day(day).0;
     let times: Vec<u128> = (0..*num_runs).map(|_| run_day(day).1).collect();
+    let result = run_day(day).0;
 
     Benchmark { result, times }
 }
@@ -117,6 +117,7 @@ fn get_day(day: &u32) -> fn() -> (Solution, Solution) {
         3 => days::day03::run,
         4 => days::day04::run,
         5 => days::day05::run,
+        6 => days::day06::run,
         _ => panic!("Unimplemented day")
     }
 }
