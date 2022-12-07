@@ -1,3 +1,5 @@
+extern crate core;
+
 use std::env;
 use crate::common::Solution;
 
@@ -118,6 +120,7 @@ fn get_day(day: &u32) -> fn() -> (Solution, Solution) {
         4 => days::day04::run,
         5 => days::day05::run,
         6 => days::day06::run,
+        7 => days::day07::run,
         _ => panic!("Unimplemented day")
     }
 }
